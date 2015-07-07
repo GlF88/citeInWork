@@ -325,22 +325,20 @@ $("document").ready(function() {
 
 	$(".galeryImg").click(function () {
 		var thisId = $(this).attr('id');
-		 $("body").css({"overflow": "hidden"})
+		$("body").css({"overflow": "hidden"})
 		$("body").scrollTop($("#cart" + thisId).offset().top);	
 		$("#cart" + thisId).animate({"width": "100%", "height": "100%"}, 500, function () {
 			$("#header").animate({"opacity": 0}, 500, function () {
 				$("#slide").css({"top": + $("#cart" + thisId).offset().top +"px"});
 			});
 		});
-		// $("#header").css({"opacity": 0});	
-		// $("body").css({"overflow": "hidden"});
-		//$("#slide").css({"top": + $("#cart" + thisId).offset().top +"px"});
 	});
 
 	$("#upBtn").click(function () {
 		$(".cart").css({"width": "95%", "height": "95%"});
 		$("body").css({"overflow": "visible"});
 		$("#slide").css({"top": "-150%"});
+		$("#header").animate({"opacity": 1}, 500);
 	});
 
 	var bigNamber = 1;
