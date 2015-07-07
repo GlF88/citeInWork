@@ -180,7 +180,6 @@
   		z-index: 2000;
   		position: fixed;
   		width: 100%;
-  		background: #192446;
   		height: 100px;
   	}
 
@@ -207,7 +206,7 @@
 		<p class="textOnImage"> Design week 2015 Saint Peterburg <br> Мы приняли участие в биенале. 
 			Совместно с партнерами <br> разработали стенд	<br>
 			<img class="mail" src="img/mail.png" width="50" data-toggle="modal" data-target="#myModal">
-			<img class="galeryImg" src="img/camera.png" width="50" >	
+			<img class="galeryImg" id="One" src="img/camera.png" width="50" >	
 		</p>
 	</div>
 	<div class="cart" id="cartTwo" > 
@@ -215,7 +214,7 @@
 		<p class="textOnImage" > Design week 2015 Saint Peterburg <br> Мы приняли участие в биенале. 
 			Совместно с партнерами <br> разработали стенд <br> 
 			<img class="mail" src="img/mail.png" width="50" data-toggle="modal" data-target="#myModal">
-			<img class="galeryImg" src="img/camera.png" width="50" >
+			<img class="galeryImg" id="Two" src="img/camera.png" width="50" >
 		</p> 
 	</div>
 	<div class="cart" id="cartThree" > 
@@ -223,7 +222,7 @@
 		<p class="textOnImage"> Design week 2015 Saint Peterburg <br> Мы приняли участие в биенале. 
 			Совместно с партнерами <br> разработали стенд <br>
 			<img class="mail" src="img/mail.png" width="50" data-toggle="modal" data-target="#myModal">
-			<img class="galeryImg" src="img/camera.png" width="50" >
+			<img class="galeryImg" id="Three" src="img/camera.png" width="50" >
 		</p> 
 	</div>
 	<div id="textFooterShell" style="opacity: 0;">
@@ -325,16 +324,24 @@ $("document").ready(function() {
 	});
 
 	$(".galeryImg").click(function () {
-		$("#slide").animate({"top": + $("body").scrollTop() + "px"}, 1000);
-		$("body").css({"overflow": "hidden"});
-		$("#header").animate({"height": "0px"}, 800);
-		//alert($(".galeryImg").height());
+		var thisId = $(this).attr('id');
+		 $("body").css({"overflow": "hidden"})
+		$("body").scrollTop($("#cart" + thisId).offset().top);	
+		$("#cart" + thisId).animate({"width": "100%", "height": "100%"}, 500, function () {
+			$("#header").animate({"opacity": 0}, 500, function () {
+				$("#slide").css({"top": + $("#cart" + thisId).offset().top +"px"});
+			});
+		});
+		// $("#header").css({"opacity": 0});	
+		// $("body").css({"overflow": "hidden"});
+		//$("#slide").css({"top": + $("#cart" + thisId).offset().top +"px"});
 	});
+
 	$("#upBtn").click(function () {
-		$("#slide").animate({"top": "-150%"}, 1000);
+		$(".cart").css({"width": "95%", "height": "95%"});
 		$("body").css({"overflow": "visible"});
-		$("#header").animate({"height": "100px"}, 1500);
-	})
+		$("#slide").css({"top": "-150%"});
+	});
 
 	var bigNamber = 1;
 	var $window = $(window),
