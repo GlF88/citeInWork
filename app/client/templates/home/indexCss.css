@@ -1,0 +1,184 @@
+@font-face{
+    font-family: CirceLight;
+    src: url(../../../assets/fonts/CirceLight.otf);
+  }
+
+  @font-face{
+    font-family: Mustang;
+    src: url(../../../assets/fonts/mustang.otf);
+  }
+
+  body{
+    background: #192446;
+    font-family: CirceLight;
+    padding: 0px;
+    overflow-x: hidden !important;
+  }
+
+  #poster{
+    width: 100%;
+    height: 800px;
+  }
+
+  img.cartClass{
+    z-index: 900;
+    opacity: 0.9;
+  }
+
+  #kingCap{
+    cursor: pointer;
+    opacity: 0;
+    margin-top: 35px;
+    margin-right: 35px;
+    width: 100px;
+    position: absolute;
+    right: 20px;
+    display: block;
+    float: right;
+  }
+
+  #logo{
+    cursor: pointer;  
+    opacity: 0;
+    float: left;
+    position: absolute;
+    left: 20px;
+    margin-top: 35px;
+    margin-left: 30px;
+  }
+
+  #lifestyle{
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 200px;
+    right: auto;
+    left: auto;
+    width: 100%;
+    color: white;
+    font-size: 11em;
+    font-family: Mustang;
+  }
+
+  #scrollDown{
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 600px;
+  }
+
+  .cartClass{
+    width: 100%;
+    margin-top: -40px;
+  }
+
+  .textFooter{
+    display: inline-block;
+    line-height: 40px;
+    color: white;
+    font-size: 25px;  
+    margin-top: 200px;
+    margin-bottom: 60px;
+    text-align: left !important;
+  }
+
+  #textFooterLeft{
+    position: absolute;
+    left: 40px;
+  }
+
+  #textFooterRight{
+    position: absolute;
+    right: 40px;
+  }
+
+  .cartClassShell{
+  }
+
+  .textOnImage{
+    font-size: 25px;
+    width: 90%;
+    z-index: 1000;
+    color: white;
+    position: relative;
+    top: -150px;
+    left: 60px;
+    text-align: left !important;
+  }
+
+  .galeryImg{
+    -webkit-filter: contrast(50%);
+    cursor: pointer;
+    position: relative;
+    top: -65px;
+    left: 95%;  
+  }
+
+  .galeryImg:hover{
+    -webkit-filter: contrast(100%);
+  }
+
+    .cartClass{
+      margin-bottom: -60px;
+    }
+
+    .cart{/*
+      opacity: 0;*/
+    }
+  
+    #cartOne{
+      z-index: 1000;
+      width: 95%;
+      margin: 0 auto;
+    }
+  
+    #cartTwo{
+      z-index: 900;
+      width: 95%;
+      margin: 0 auto;
+    }
+  
+    #cartThree{
+      z-index: 800;
+      width: 95%;
+      margin: 0 auto;
+    }
+  
+    .mail{
+      -webkit-filter: contrast(50%);
+    cursor: pointer;
+    position: relative;
+    top: -65px;
+    left: 92%;  
+    }
+  
+    .mail:hover{
+       -webkit-filter: contrast(100%);
+    }
+  
+    #slide{
+      opacity: 1;
+      z-index: 1990;
+      position: absolute;
+      top: -150%;
+      width: 100%;
+      height: 700px;
+      background: #eee;
+    }
+
+
+    #header{
+      z-index: 2000;
+      position: fixed;
+      width: 100%;
+      height: 100px;
+    }
+
+    #upBtn{
+      cursor: pointer;
+      z-index: 9000;
+      margin: 0 auto;
+      position: relative;
+      bottom: 940px;
+    }
